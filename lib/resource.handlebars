@@ -37,6 +37,7 @@
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#{{../uniqueId}}_{{method}}_request" data-toggle="tab">Request</a></li>
                             <li><a href="#{{../uniqueId}}_{{method}}_response" data-toggle="tab">Response</a></li>
+                            <li><a href="#{{../uniqueId}}_{{method}}_examples" data-toggle="tab">Examples</a></li>
                         </ul>
 
                         <!-- Tab panes -->
@@ -92,6 +93,23 @@
                                 
                                 {{/if}}
                             </div>
+
+                            <div class="tab-pane" id="{{../uniqueId}}_{{method}}_examples">
+                                {{#if responses}}
+                                    {{#each responses}}
+                                        {{#if this.body}}
+                                            {{#each this.body}}
+                                                <h4>{{@../key}}</h4>
+                                                <p><strong>Type: {{@key}}</strong></p>
+                                                {{#if this.example}}
+                                                    <pre>{{this.example}}</pre>  
+                                                {{/if}}    
+                                            {{/each}}
+                                        {{/if}}
+                                     {{/each}}                                
+                                {{/if}}
+                            </div>
+
                         </div>
                     </div>
                 </div>
