@@ -78,19 +78,6 @@
                                             <li><strong>{{@key}}</strong>: {{this.description}}</li>
                                         {{/each}}
                                     </ul>
-
-                                    {{#each responses}}
-                                        {{#if this.body}}
-                                            {{#each this.body}}
-                                                <h4>{{@../key}} Example</h4>
-                                                <p><strong>Type: {{@key}}</strong></p>
-                                                {{#if this.example}}
-                                                    <pre>{{this.example}}</pre>  
-                                                {{/if}}    
-                                            {{/each}}
-                                        {{/if}}
-                                    {{/each}}
-                                
                                 {{/if}}
                             </div>
 
