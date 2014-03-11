@@ -77,6 +77,13 @@
                                             <li><strong>{{@key}}</strong>: {{this.description}}</li>
                                         {{/each}}
                                     </ul>
+
+                                    {{#each responses}}
+                                        {{#if this.body.example}}
+                                            <p><strong>Type: {{@key}}</strong></p>
+                                            <pre>{{this.body.example}}</pre>  
+                                        {{/if}}    
+                                    {{/each}}
                                 {{/if}}
                             </div>
                         </div>
