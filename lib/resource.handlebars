@@ -79,8 +79,8 @@
                                     </ul>
 
                                     {{#each responses}}
+                                        <h4>{{@key}} Example</h4>
                                         {{#if this.body.example}}
-                                            <p><strong>Type: {{@key}}</strong></p>
                                             <pre>{{this.body.example}}</pre>  
                                         {{/if}}    
                                     {{/each}}
