@@ -78,12 +78,14 @@
                                         {{/each}}
                                     </ul>
 
-                                    {{#each responses.body}}
-                                        {{#if this.example}}
-                                            <h4>{{@key}} Example</h4>
-                                            {{#if this.body.example}}
-                                                <pre>{{this.body.example}}</pre>  
-                                            {{/if}}    
+                                    {{#each responses}}
+                                        {{#if this.body}}
+                                            {{#each this.body}}
+                                                <h4>{{@../key}} Example</h4>
+                                                {{#if this.example}}
+                                                    <pre>{{this.example}}</pre>  
+                                                {{/if}}    
+                                            {{/each}}
                                         {{/if}}
                                     {{/each}}
                                 
