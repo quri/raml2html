@@ -78,14 +78,15 @@
                                         {{/each}}
                                     </ul>
 
-                                    {{#each responses}}
-                                        {{#if this.body.example}}
+                                    {{#each responses.body}}
+                                        {{#if this.example}}
                                             <h4>{{@key}} Example</h4>
                                             {{#if this.body.example}}
                                                 <pre>{{this.body.example}}</pre>  
                                             {{/if}}    
                                         {{/if}}
                                     {{/each}}
+                                
                                 {{/if}}
                             </div>
                         </div>
